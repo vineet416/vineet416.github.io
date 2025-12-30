@@ -110,11 +110,11 @@ Built a **GenAI-powered finance assistant** using **Retrieval-Augmented Generati
 ![AWS](https://img.shields.io/badge/AWS-EC2_|_S3_|_IAM-232F3E?style=flat-square&logo=amazonaws&logoColor=white)
 
 **🔗 Links**  
-[![GitHub](https://img.shields.io/badge/GitHub-Repo-181717?style=flat-square&logo=github)](https://github.com/vineet416/FinEduGuide-AI-Assistant) : https://github.com/vineet416/FinEduGuide-AI-Assistant  
+[![GitHub Repo Link](https://img.shields.io/badge/GitHub-Repo_Link-181717?style=flat-square&logo=github)](https://github.com/vineet416/FinEduGuide-AI-Assistant) : https://github.com/vineet416/FinEduGuide-AI-Assistant  
 
-[![Live App](https://img.shields.io/badge/Streamlit-Live_App-FF4B4B?style=flat-square&logo=streamlit)](https://fineduguide-ai-assistant.streamlit.app/) : https://fineduguide-ai-assistant.streamlit.app/  
+[![Live App Link](https://img.shields.io/badge/Streamlit-Live_App_Link-FF4B4B?style=flat-square&logo=streamlit)](https://fineduguide-ai-assistant.streamlit.app/) : https://fineduguide-ai-assistant.streamlit.app/  
 
-[![Demo](https://img.shields.io/badge/YouTube-Demo-FF0000?style=flat-square&logo=youtube)](https://www.youtube.com/watch?v=EQjH1oloHyc) : https://www.youtube.com/watch?v=EQjH1oloHyc  
+[![YouTube Demo Link](https://img.shields.io/badge/YouTube-Demo_Link-FF0000?style=flat-square&logo=youtube)](https://www.youtube.com/watch?v=EQjH1oloHyc) : https://www.youtube.com/watch?v=EQjH1oloHyc  
 
 ---
 
@@ -139,9 +139,9 @@ Developed a **machine learning-based credit risk prediction system** to proactiv
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
 
 **🔗 Links**  
-[![GitHub](https://img.shields.io/badge/GitHub-Repo-181717?style=flat-square&logo=github)](https://github.com/vineet416/Credit_Card_Default_Prediction) : https://github.com/vineet416/Credit_Card_Default_Prediction  
+[![GitHub Repo Link](https://img.shields.io/badge/GitHub-Repo_Link-181717?style=flat-square&logo=github)](https://github.com/vineet416/Credit_Card_Default_Prediction) : https://github.com/vineet416/Credit_Card_Default_Prediction  
 
-[![Live App](https://img.shields.io/badge/Streamlit-Live_App-FF4B4B?style=flat-square&logo=streamlit)](https://credit-card--default-prediction.streamlit.app/) : https://credit-card--default-prediction.streamlit.app/  
+[![Live App Link](https://img.shields.io/badge/Streamlit-Live_App_Link-FF4B4B?style=flat-square&logo=streamlit)](https://credit-card--default-prediction.streamlit.app/) : https://credit-card--default-prediction.streamlit.app/  
 
 ---
 
@@ -165,7 +165,7 @@ Conducted an **end-to-end churn analytics project** to identify churn drivers, q
 ![PowerBI](https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black)
 
 **🔗 Links**  
-[![GitHub](https://img.shields.io/badge/GitHub-Repo-181717?style=flat-square&logo=github)](https://github.com/vineet416/Telecom-Customer-Churn-Analytics) : https://github.com/vineet416/Telecom-Customer-Churn-Analytics  
+[![GitHub Repo Link](https://img.shields.io/badge/GitHub-Repo_Link-181717?style=flat-square&logo=github)](https://github.com/vineet416/Telecom-Customer-Churn-Analytics) : https://github.com/vineet416/Telecom-Customer-Churn-Analytics  
 
 ---
 
