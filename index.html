@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vineet Patel - Data Scientist | AI Engineer | GenAI & Analytics Enthusiast">
+    <meta name="author" content="Vineet Patel">
+    <title>Vineet Patel | Data Scientist & AI Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #0077B5;
+            --secondary-color: #FF6B6B;
+            --text-color: #333;
+            --bg-color: #f5f5f5;
+            --card-bg: #ffffff;
+            --accent-1: #4CAF50;
+            --accent-2: #673AB7;
+            --dark-bg: #1a1a1a;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header/Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            color: var(--dark-bg);
+            animation: fadeInDown 1s ease;
+        }
+
+        .hero h2 {
+            font-size: 1.5em;
+            color: #666;
+            margin-bottom: 30px;
+            font-weight: 400;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            color: white;
+        }
+
+        .btn-github {
+            background: #181717;
+        }
+
+        .btn-github:hover {
+            background: #333;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-linkedin {
+            background: var(--primary-color);
+        }
+
+        .btn-linkedin:hover {
+            background: #005885;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 119, 181, 0.4);
+        }
+
+        .btn-resume {
+            background: var(--secondary-color);
+        }
+
+        .btn-resume:hover {
+            background: #ff5252;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+        }
+
+        /* Section Styling */
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease;
+        }
+
+        .section h2 {
+            font-size: 2.2em;
+            margin-bottom: 25px;
+            color: var(--dark-bg);
+            border-bottom: 3px solid var(--accent-2);
+            padding-bottom: 10px;
+        }
+
+        .section h3 {
+            font-size: 1.5em;
+            margin: 20px 0 15px;
+            color: var(--accent-2);
+        }
+
+        /* About Section */
+        .about-content {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        .about-content ul {
+            list-style: none;
+            padding: 20px 0;
+        }
+
+        .about-content li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .about-content li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--accent-2);
+            font-size: 1.2em;
+        }
+
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .skill-category {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            border-radius: 15px;
+            color: white;
+        }
+
+        .skill-category h4 {
+            margin-bottom: 15px;
+            font-size: 1.2em;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .skill-tag {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 15px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            border-left: 5px solid var(--accent-2);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card h3 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: var(--dark-bg);
+        }
+
+        .project-section {
+            margin: 20px 0;
+        }
+
+        .project-section h4 {
+            color: var(--accent-2);
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .project-section ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        .project-section li {
+            padding: 5px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .project-section li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-1);
+            font-weight: bold;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .tech-badge {
+            background: var(--accent-2);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .project-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background: var(--dark-bg);
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            font-size: 0.9em;
+        }
+
+        .project-link:hover {
+            background: var(--accent-2);
+            transform: translateY(-2px);
+        }
+
+        /* Current Focus Section */
+        .focus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .focus-item {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 25px;
+            border-radius: 15px;
+            color: white;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .focus-item:hover {
+            transform: scale(1.05);
+        }
+
+        .focus-item span {
+            font-size: 2em;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .contact-card a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        .contact-card span {
+            display: block;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-style: italic;
+            color: #666;
+            margin: 20px 0;
+            font-size: 1.2em;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero h2 {
+                font-size: 1.2em;
+            }
+
+            .section {
+                padding: 25px;
+            }
+
+            .section h2 {
+                font-size: 1.8em;
+            }
+
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>👋 Hi, I'm Vineet Patel</h1>
+            <h2>Data Scientist | AI Engineer | GenAI & Analytics Enthusiast</h2>
+            <div class="social-links">
+                <a href="https://github.com/vineet416" class="btn btn-github" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/vineet416" class="btn btn-linkedin" target="_blank">LinkedIn</a>
+                <a href="https://drive.google.com/file/d/1HH7C-u3pTkLqjhr2GteQ0K0oJXp74MxB/view?usp=sharing" class="btn btn-resume" target="_blank">Download Resume</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section">
+            <h2>🚀 About Me</h2>
+            <div class="about-content">
+                <p>I'm an <strong>aspiring Data Scientist and AI Engineer</strong> passionate about building <strong>intelligent, data-driven systems</strong> that solve real-world problems. My work spans <strong>machine learning, GenAI applications, and business analytics</strong>, with a strong focus on <strong>end-to-end implementation and impact</strong>.</p>
+                <ul>
+                    <li>🎓 B.Sc. Applied AI & Data Science — <em>IIT Jodhpur</em></li>
+                    <li>🔭 Working on <strong>GenAI & machine learning projects</strong></li>
+                    <li>🌱 Exploring <strong>RAG systems, LLMs, and scalable AI applications</strong></li>
+                    <li>💡 Open to <strong>internships, collaborations, and research-driven projects</strong></li>
+                    <li>📫 Reach me at: <strong>vineetpatel468@gmail.com</strong></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section">
+            <h2>🧠 Skills & Tech Stack</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h4>Core Capabilities</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Data Analysis</span>
+                        <span class="skill-tag">EDA</span>
+                        <span class="skill-tag">Statistics</span>
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Model Evaluation</span>
+                        <span class="skill-tag">Business Analytics</span>
+                        <span class="skill-tag">Generative AI</span>
+                        <span class="skill-tag">RAG</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4>Programming & Data</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4>ML & AI Frameworks</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">PyTorch</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4>GenAI & LLMs</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">LangChain</span>
+                        <span class="skill-tag">Hugging Face</span>
+                        <span class="skill-tag">OpenAI</span>
+                        <span class="skill-tag">LLaMA</span>
+                        <span class="skill-tag">Pinecone</span>
+                        <span class="skill-tag">ChromaDB</span>
+                        <span class="skill-tag">FAISS</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4>Backend & Apps</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">Streamlit</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4>Databases</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4>Visualization & BI</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Matplotlib</span>
+                        <span class="skill-tag">Seaborn</span>
+                        <span class="skill-tag">Excel</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4>Cloud & DevOps</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub Actions</span>
+                        <span class="skill-tag">VS Code</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section">
+            <h2>🏆 Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <h3>🤖 FinEduGuide – AI Finance Assistant</h3>
+                    
+                    <div class="project-section">
+                        <h4>🧩 Problem Statement</h4>
+                        <p>Financial education content is often unstructured and spread across lengthy documents, making it difficult for users to quickly find precise, context-aware answers.</p>
+                    </div>
+
+                    <div class="project-section">
+                        <h4>💡 Solution</h4>
+                        <p>Built a <strong>GenAI-powered finance assistant</strong> using <strong>Retrieval-Augmented Generation (RAG)</strong> to enable document-based contextual Q&A.</p>
+                    </div>
+
+                    <div class="project-section">
+                        <h4>🔑 Key Contributions</h4>
+                        <ul>
+                            <li>Designed an end-to-end RAG pipeline for grounded responses</li>
+                            <li>Implemented semantic vector search using Pinecone</li>
+                            <li>Developed backend APIs with FastAPI and UI using Streamlit</li>
+                            <li>Deployed the application on AWS for scalable access</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h4>🛠️ Tech Stack</h4>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">LangChain</span>
+                            <span class="tech-badge">HuggingFace</span>
+                            <span class="tech-badge">OpenAI</span>
+                            <span class="tech-badge">Pinecone</span>
+                            <span class="tech-badge">FastAPI</span>
+                            <span class="tech-badge">Streamlit</span>
+                            <span class="tech-badge">AWS</span>
+                        </div>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="https://github.com/vineet416/FinEduGuide-AI-Assistant" class="project-link" target="_blank">GitHub Repo</a>
+                        <a href="https://fineduguide-ai-assistant.streamlit.app/" class="project-link" target="_blank">Live App</a>
+                        <a href="https://www.youtube.com/watch?v=EQjH1oloHyc" class="project-link" target="_blank">YouTube Demo</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <h3>📉 Credit Card Default Prediction</h3>
+                    
+                    <div class="project-section">
+                        <h4>🧩 Problem Statement</h4>
+                        <p>Financial institutions face significant losses due to credit card defaults, while traditional rule-based systems fail to identify high-risk customers early.</p>
+                    </div>
+
+                    <div class="project-section">
+                        <h4>💡 Solution</h4>
+                        <p>Developed a <strong>machine learning-based credit risk prediction system</strong> to proactively detect potential defaulters.</p>
+                    </div>
+
+                    <div class="project-section">
+                        <h4>🔑 Key Contributions</h4>
+                        <ul>
+                            <li>Performed EDA & feature engineering on credit data</li>
+                            <li>Trained and evaluated multiple ML models, selecting Random Forest</li>
+                            <li>Built and deployed a Streamlit app for real-time predictions</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h4>🛠️ Tech Stack</h4>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Pandas</span>
+                            <span class="tech-badge">Scikit-learn</span>
+                            <span class="tech-badge">Random Forest</span>
+                            <span class="tech-badge">Streamlit</span>
+                        </div>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="https://github.com/vineet416/Credit_Card_Default_Prediction" class="project-link" target="_blank">GitHub Repo</a>
+                        <a href="https://credit-card--default-prediction.streamlit.app/" class="project-link" target="_blank">Live App</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <h3>📊 Telecom Customer Churn Analytics</h3>
+                    
+                    <div class="project-section">
+                        <h4>🧩 Problem Statement</h4>
+                        <p>Telecom companies experience high customer churn and revenue loss without clear visibility into churn drivers and at-risk customers.</p>
+                    </div>
+
+                    <div class="project-section">
+                        <h4>💡 Solution</h4>
+                        <p>Conducted an <strong>end-to-end churn analytics project</strong> to identify churn drivers, quantify revenue at risk, and support data-driven retention strategies.</p>
+                    </div>
+
+                    <div class="project-section">
+                        <h4>🔑 Key Contributions</h4>
+                        <ul>
+                            <li>SQL-driven churn analysis using MySQL</li>
+                            <li>Python EDA to uncover behavioral churn patterns</li>
+                            <li>Designed Power BI dashboards for executive decision-making</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h4>🛠️ Tech Stack</h4>
+                        <div class="tech-stack">
+                            <span class="tech-badge">MySQL</span>
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Pandas</span>
+                            <span class="tech-badge">Power BI</span>
+                        </div>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="https://github.com/vineet416/Telecom-Customer-Churn-Analytics" class="project-link" target="_blank">GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Current Focus Section -->
+        <section class="section">
+            <h2>🎯 Current Focus</h2>
+            <div class="focus-grid">
+                <div class="focus-item">
+                    <span>🤖</span>
+                    <p>Building GenAI & RAG-based applications</p>
+                </div>
+                <div class="focus-item">
+                    <span>📊</span>
+                    <p>Advancing skills in machine learning & analytics</p>
+                </div>
+                <div class="focus-item">
+                    <span>☁️</span>
+                    <p>Learning cloud deployment & MLOps basics</p>
+                </div>
+                <div class="focus-item">
+                    <span>🤝</span>
+                    <p>Open to internships and collaborations</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section">
+            <h2>📫 Let's Connect</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <span>📧</span>
+                    <a href="mailto:vineetpatel468@gmail.com">Email Me</a>
+                </div>
+                <div class="contact-card">
+                    <span>💼</span>
+                    <a href="https://linkedin.com/in/vineet416" target="_blank">LinkedIn</a>
+                </div>
+                <div class="contact-card">
+                    <span>💻</span>
+                    <a href="https://github.com/vineet416" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <h2>📄 Resume</h2>
+            <a href="https://drive.google.com/file/d/1HH7C-u3pTkLqjhr2GteQ0K0oJXp74MxB/view?usp=sharing" class="btn btn-resume" target="_blank">Download Resume (PDF)</a>
+            
+            <p>"Turning data into intelligence, and intelligence into impact."</p>
+            
+            <h3>💼 Open for Data Science & AI opportunities</h3>
+            
+            <p style="margin-top: 30px; font-size: 0.9em;">⭐️ From <a href="https://github.com/vineet416" style="color: var(--accent-2); text-decoration: none;">vineet416</a></p>
+        </footer>
+    </div>
+</body>
+</html>
